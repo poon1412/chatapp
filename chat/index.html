@@ -1,0 +1,109 @@
+
+
+    <!doctype html>
+<html>
+  <head>
+    <title>Test Real-time chat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <section class="main-content columns is-fullheight">
+        <aside class="column is-2 is-narrow-mobile is-fullheight section">
+            <p class="menu-label is-hidden-touch"></p>
+            <ul class="menu-list sidebar">
+               
+            </ul>
+            <ul class="menu-list">
+                <li class="room">
+                    <a class='create_room'><span class='icon is-small'><i class='fas fa-plus-circle' aria-hidden='true'></i></span></a>
+                    <ul class='rooms' id='rooms'></ul>
+                </li>
+            </ul>
+        </aside>
+        <div class="container column is-10">
+            <div class="section">
+                <div class="card messagetest">
+                    <div class="card-header" id="go-first">
+                        <p class="card-header-title"></p>
+                    </div>
+                    <div class="card-content" style="height: 400px;overflow: scroll;">
+                        <div class="content">
+                                <ul id ="messages" class="messages">
+                                </ul>
+                        </div>
+                    </div>
+               
+                    <footer class="card-footer" style="padding: 0.45rem;">
+                            <input class="input is is-rounded" id="message-input" required="required" type="text" placeholder="Text input"> &nbsp;
+                            <a class="button is-dark is-rounded sendmessage" disabled>send</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+
+
+    <div class="modal md">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input username" type="text" placeholder="User Name">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input password" type="password" placeholder="Password">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <button class="button loging is-success">
+                    Login
+                  </button>
+                </p>
+              </div>
+        </div>
+        <button class="modal-close is-large close1" aria-label="close"></button>
+      </div>
+
+      <div class="modal md2">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                    <div class="column">
+                           
+                              <div class="field is-grouped">
+                                <div class="control has-icons-left is-expanded">
+                                  <input type="text" value=""  id="room-name" name="room-name" class="input is-medium is-flat room-name" placeholder="input name's room" required="">
+                                </div>
+                    
+                                <div class="control">
+                                  <button class="button room-name is-medium is-link">
+                                    <strong>Send</strong>
+                                  </button>
+                                </div>
+                              </div>
+                          
+                          </div>
+            </div>
+            <button class="modal-close is-large close2" aria-label="close"></button>
+        </div>
+
+    <script src="http://localhost:8888/chat/js/socket.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/rexeze/formatTimeStamp/src/index-cdn.js"></script>
+    <script src="http://localhost:8888/chat/js/chat.js"></script>
+  </body>
+</html>
+
+
+
+
